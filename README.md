@@ -1,4 +1,4 @@
-# FY-B10-or-YF-B10-flow-sensor-esp32-example
+# FY-B10 or YF-B10 flow sensor ESP32 example
 Calibration factor and calculation formula for YF-B10 or "FY-B10" Flow Sensor
 
 If you bought a water flow sensor in aliexpress, 1 inch model YF-B10 or as it happened to me receive a "FY-B10" that is not retrieved in any google search, you probably felt a bit frustrated finding the calibration factor formula to use it with your ESP32 or Arduino in your IoT projects.
