@@ -13,7 +13,7 @@ byte sensorPin = 2;
 // The hall-effect flow sensor outputs approximately 4.5 pulses per second per
 // litre/minute of flow.
 float calibrationFactor = 6.5163;
-float calibrationDifference = -2.7;
+float calibrationDifference = 2.7;
 
 volatile byte pulseCount;  
 
@@ -65,9 +65,9 @@ void loop()
     // this case) coming from the sensor.
     float tmp = (1000.0 / (millis() - oldTime)) * pulseCount;
 
-    // As we have a subtraction we have to avoid the negative value when no pulse is found
+    // As we have a add operation we need to avoid the positive value when no pulse is found
     if (tmp > 0) {
-      flowRate = tmp / calibrationFactor - calibrationDifference;
+      flowRate = tmp / calibrationFactor + calibrationDifference;
     }else {
       flowRate = 0;
     }
