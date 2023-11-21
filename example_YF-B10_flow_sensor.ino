@@ -67,7 +67,7 @@ void loop()
 
     // As we have a add operation we need to avoid the positive value when no pulse is found
     if (tmp > 0) {
-      flowRate = tmp / calibrationFactor + calibrationDifference;
+      flowRate = (tmp + calibrationDifference) / calibrationFactor;
     }else {
       flowRate = 0;
     }
